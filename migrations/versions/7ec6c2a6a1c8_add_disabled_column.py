@@ -24,9 +24,9 @@ def upgrade():
     # update the user column so all values are disabled values are False for
     # user.
     from application import db
-    from application.flicket.models.flicket_user import FlicketUser
+    from application.flicket.models.flicket_user import flicketUser
 
-    users = FlicketUser.query.all()
+    users = flicketUser.query.all()
 
     if users:
         for user in users:

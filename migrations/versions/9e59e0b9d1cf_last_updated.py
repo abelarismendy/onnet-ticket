@@ -24,7 +24,7 @@ def upgrade():
     print("Updating last_updated dates.")
 
     from application import app, db
-    from application.flicket.models.flicket_models import FlicketTicket, FlicketPost
+    from application.flicket.models.flicket_models import flicketTicket, flicketPost
 
     def last_update_posts(posts):
 
@@ -36,7 +36,7 @@ def upgrade():
 
         return last_updated
 
-    query = FlicketTicket.query.all()
+    query = flicketTicket.query.all()
 
     update_database = False
 

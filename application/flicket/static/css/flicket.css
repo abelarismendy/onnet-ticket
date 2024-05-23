@@ -39,7 +39,7 @@ h1 {
 }
 
 .navbar-flicket {
-    border-bottom: 1px solid #F1592A;
+    border-bottom: 1px solid rgba(0, 0, 128, 1);
 }
 
 /*noinspection CssInvalidFunction*/
@@ -59,15 +59,15 @@ footer {
 }
 
 header {
-    background: rgba(241, 86, 39, 1);
-    background: -moz-linear-gradient(left, rgba(241, 86, 39, 1) 0%, rgba(237, 187, 173, 1) 61%, rgba(237, 187, 173, 1) 100%);
+    background: rgba(0, 0, 128, 1); /* Azul oscuro */
+    background: -moz-linear-gradient(left, rgba(0, 0, 128, 1) 0%, rgba(0, 191, 255, 1) 50%, rgba(135, 206, 250, 1) 100%);
     /*noinspection CssInvalidFunction*/
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241, 86, 39, 1)), color-stop(61%, rgba(237, 187, 173, 1)), color-stop(100%, rgba(237, 187, 173, 1)));
-    background: -webkit-linear-gradient(left, rgba(241, 86, 39, 1) 0%, rgba(237, 187, 173, 1) 61%, rgba(237, 187, 173, 1) 100%);
-    background: -o-linear-gradient(left, rgba(241, 86, 39, 1) 0%, rgba(237, 187, 173, 1) 61%, rgba(237, 187, 173, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(241, 86, 39, 1) 0%, rgba(237, 187, 173, 1) 61%, rgba(237, 187, 173, 1) 100%);
-    background: linear-gradient(to right, rgba(241, 86, 39, 1) 0%, rgba(237, 187, 173, 1) 61%, rgba(237, 187, 173, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f15627', endColorstr='#edbbad', GradientType=1);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 0, 128, 1)), color-stop(50%, rgba(0, 191, 255, 1)), color-stop(100%, rgba(135, 206, 250, 1)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 128, 1) 0%, rgba(0, 191, 255, 1) 50%, rgba(135, 206, 250, 1) 100%);
+    background: -o-linear-gradient(left, rgba(0, 0, 128, 1) 0%, rgba(0, 191, 255, 1) 50%, rgba(135, 206, 250, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 0, 128, 1) 0%, rgba(0, 191, 255, 1) 50%, rgba(135, 206, 250, 1) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 128, 1) 0%, rgba(0, 191, 255, 1) 50%, rgba(135, 206, 250, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000080', endColorstr='#87CEFA', GradientType=1);
     color: white;
     padding: 10pt;
 }
