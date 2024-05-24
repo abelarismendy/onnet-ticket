@@ -81,7 +81,7 @@
                 {{ content.content|markdown }}
                 {%- if content.modified_id -%}
                     <div class="">
-                        {{ _('This post was modified by') }} {{ content.modified.name }}
+                        {{ _('Este mensaje fue modificado por') }} {{ content.modified.name }}
                         {{ _('on') }} {{ content.date_modified }} |
                         {%- if post -%}
                             &nbsp;<a href="{{ url_for('flicket_bp.flicket_history_post', post_id=content.id) }}">{{ _('edit

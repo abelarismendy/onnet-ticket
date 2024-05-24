@@ -89,7 +89,7 @@ db_driver: This is the name of the driver used to connect to the database. For e
 ## 0.2.2
 
 * Added favicon.
-* My Tickets menu now dropdown with additional filters for tickets assigned to self or created by self.
+* Mis Tickets menu now dropdown with additional filters for tickets assigned to self or created by self.
 * Fixed post quoting.
 * Added date tracking of any changes to ticket (replies, edits, subscribing, assignined ...)
   so we can find those old tickets that have had no action.

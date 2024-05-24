@@ -81,7 +81,7 @@ def tickets_view(page, is_my_view=False, subscribed=False):
 
     title = gettext('Tickets')
     if is_my_view:
-        title = gettext('My Tickets')
+        title = gettext('Mis Tickets')
 
     if content:
         form.content.data = content

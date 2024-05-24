@@ -1,5 +1,5 @@
 {% extends 'flicket_base.html' %}
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% block content %}
     <div class="container">
 
@@ -8,13 +8,13 @@
 
                 <div class="row">
                     <div class="col">
-                        <h1>{{ title }}</h1>
+                        <h1>{{ título }}</h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <p>
-                            {{ _('Post edit history.') }}
+                            {{ _('Historial de edición de publicaciones.') }}
                         </p>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <dl>
                             {% if history %}
                                 {% for h in history %}
-                                    <dt>{{ h.user.name }} {{ _('originally wrote on') }} {{ h.date_modified }}</dt>
+                                    <dt>{{ h.user.name }} {{ _('originalmente escrito el') }} {{ h.date_modified }}</dt>
                                     <dd>
                                         {% filter markdown %}
                                             {{ h.original_content }}
@@ -37,7 +37,7 @@
                                     </dd>
                                 {% endfor %}
                             {% else %}
-                                <dd>{{ _('No changes have been made to the post content.') }}</dd>
+                                <dd>{{ _('No se han realizado cambios en el contenido de la publicación.') }}</dd>
                             {% endif %}
                         </dl>
 

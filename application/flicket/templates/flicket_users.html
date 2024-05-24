@@ -21,7 +21,7 @@
 
 
             <div class="form-group">
-                <label class="col control-label" for="autocomplete-username">Name</label>
+                <label class="col control-label" for="autocomplete-username">Nombre</label>
                 <div class="col mb-1 text-center">
                     {{ form.username(class="form-control", id="autocomplete-username") }}
                 </div>
@@ -29,7 +29,7 @@
                     {{ form.submit }}
                 </div>
                 <div class="col mb-1 text-center">
-                    <a class="btn btn-outline-primary btn-sm" href="{{ url_for('flicket_bp.flicket_users') }}">reset</a>
+                    <a class="btn btn-outline-primary btn-sm" href="{{ url_for('flicket_bp.flicket_users') }}">limpiar</a>
                 </div>
             </div>
             {% if form.username.errors %}
@@ -96,7 +96,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Username') }}
+                                    {{ _('Nombre de Usuario') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     <a href="{{ url_for('flicket_bp.flicket_user', user_id=u.id) }}">
@@ -114,7 +114,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Name') }}
+                                    {{ _('Nombre') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.name }}
@@ -123,7 +123,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Email') }}
+                                    {{ _('Correo Electrónico') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     <a href="mailto:{{ u.email }}">{{ u.email }}</a>
@@ -137,7 +137,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Job Title') }}
+                                    {{ _('Cargo') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.job_title }}
@@ -146,7 +146,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Posts') }}
+                                    {{ _('Publicaciones') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.total_posts }}
@@ -155,7 +155,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Assigned') }}
+                                    {{ _('Asignados') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.total_assigned }}

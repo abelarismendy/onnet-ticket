@@ -1,5 +1,5 @@
 {% extends "flicket_base.html" %}
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% block content %}
     <!-- {{ self._TemplateReference__context.name }} -->
 
@@ -15,9 +15,8 @@
             <div class="col">
                 <h2 class="flicket-title">#{{ ticket.id_zfill }} - {{ ticket.title }}</h2>
                 <p>
-                    {{ _('Type department and/or category and pick from drop down list to change category.') }} <a
-                        href="{{ url_for('flicket_bp.departments') }}" target="_blank">Available departments and
-                    categories</a>.
+                    {{ _('Escriba el departamento y/o categoría y seleccione de la lista desplegable para cambiar la categoría.') }} <a
+                        href="{{ url_for('flicket_bp.departments') }}" target="_blank">Departamentos y categorías disponibles</a>.
                 </p>
                 <form action=""
                       class="form-horizontal"

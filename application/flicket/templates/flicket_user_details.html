@@ -1,5 +1,5 @@
 {% extends 'flicket_base.html' %}
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% block content %}
     <!-- {{ self._TemplateReference__context.name }} -->
     <div class="container">
@@ -18,22 +18,22 @@
                     {% endif %}
                     </dd>
 
-                    <dt class="col-3 text-right">{{ _('Username') }}</dt>
+                    <dt class="col-3 text-right">{{ _('Nombre de usuario') }}</dt>
                     <dd class="col-9">{{ user.username }}</dd>
 
-                    <dt class="col-3 text-right">{{ _('Email') }}</dt>
+                    <dt class="col-3 text-right">{{ _('Correo electrónico') }}</dt>
                     <dd class="col-9"><a href="mailto:{{ user.email }}">{{ user.email }}</a></dd>
 
-                    <dt class="col-3 text-right">{{ _('Date Joined') }}</dt>
+                    <dt class="col-3 text-right">{{ _('Fecha de registro') }}</dt>
                     <dd class="col-9">{{ user.date_added }}</dd>
 
-                    <dt class="col-3 text-right">{{ _('Job Title') }}</dt>
+                    <dt class="col-3 text-right">{{ _('Cargo') }}</dt>
                     <dd class="col-9">{{ user.job_title }}</dd>
 
-                    <dt class="col-3 text-right">{{ _('Number Of Posts') }}</dt>
+                    <dt class="col-3 text-right">{{ _('Número de publicaciones') }}</dt>
                     <dd class="col-9">{{ user.total_posts }}</dd>
 
-                    <dt class="col-3 text-right">{{ _('Number Assigned') }}</dt>
+                    <dt class="col-3 text-right">{{ _('Tickets asignados') }}</dt>
                     <dd class="col-9">{{ user.total_assigned }}</dd>
 
                 </dl>

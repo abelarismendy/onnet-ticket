@@ -5,15 +5,15 @@
         {{ title }}
     </h1>
     <p>
-        The following tickets that you have created or been assigned have not yet been closed.
+        Los siguientes tickets que ha creado o que le han sido asignados aún no se han cerrado.
     </p>
     <table>
         <tr>
-            <th>Ticket Number</th>
-            <th>Title</th>
-            <th>Priority</th>
-            <th>Status</th>
-            <th>Assigned</th>
+            <th>Numero del ticket</th>
+            <th>Titulo</th>
+            <th>Prioridad</th>
+            <th>Estado</th>
+            <th>Asignación</th>
         </tr>
         {% for ticket in tickets %}
             <tr>

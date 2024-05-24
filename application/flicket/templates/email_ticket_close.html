@@ -5,7 +5,7 @@
         {{ title }}
     </h1>
     <p>
-        {{ _('Ticket has been closed:') }} <a href="{{ ticket_url }}">{{ ticket.id_zfill }}</a>
+        {{ _('El ticket ha sido cerrado:') }} <a href="{{ ticket_url }}">{{ ticket.id_zfill }}</a>
     </p>
     {% include('email_include_details.html') %}
 {% endblock %}

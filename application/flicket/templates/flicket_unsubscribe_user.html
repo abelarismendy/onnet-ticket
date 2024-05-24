@@ -23,7 +23,7 @@
 
                         <div class="row m-0">
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Department') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Departmento') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.category.department.department }}
                                     {%- if change_category %}
@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Category') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Categoria') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.category.category }}
                                     {%- if change_category %}
@@ -47,11 +47,11 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Status') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Estado') }}</div>
                                 <div class="flicket-tickets-content">{{ ticket.current_status.status }}</div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Priority') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Prioridad') }}</div>
                                 <div class="flicket-tickets-content
                                 {%- if ticket.current_status.status == 'Closed' -%}
                                     {{ ' ' }}flicket-status-closed
@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Assigned') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Asignado a') }}</div>
                                 <div class="flicket-tickets-content">
                                     {% if ticket.assigned.username %}
                                         {{ ticket.assigned.name }}
@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Total Hours') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Total de Horas') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.total_hours }}
                                 </div>

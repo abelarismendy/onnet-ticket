@@ -18,7 +18,7 @@
                     <form action="" class="form justify-content-center" method="post" name="login">
                         {{ form.hidden_tag() }}
                         <div class="form-group">
-                            <label class="sr-only">{{ _('Username') }}</label>
+                            <label class="sr-only">{{ _('Usuario') }}</label>
                             {{ form.username(class="form-control") }}
                         </div>
                         {% if form.username.errors %}
@@ -29,7 +29,7 @@
                             </div>
                         {% endif %}
                         <div class="form-group">
-                            <label class="sr-only">{{ _('Password') }}</label>
+                            <label class="sr-only">{{ _('Contraseña') }}</label>
                             {{ form.password(class="form-control") }}
                         </div>
                         {% if form.password.errors %}
@@ -41,7 +41,7 @@
                         {% endif %}
 
                         <div class="form-group text-center">
-                            <label class="col-form-label">{{ _('Remember Me') }}</label>
+                            <label class="col-form-label">{{ _('Recuerdame') }}</label>
                             {{ form.remember_me }}
                         </div>
 
@@ -56,7 +56,7 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <a href="{{ url_for('flicket_bp.password_reset') }}">reset password</a>
+                    <a href="{{ url_for('flicket_bp.password_reset') }}">Restablecer contraseña</a>
                 </div>
             </div>
         </div>

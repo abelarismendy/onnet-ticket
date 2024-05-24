@@ -6,10 +6,10 @@
     </h1>
     {% include('email_include_details.html') %}
     <p>
-        {{ _('There are new replies to ticket:') }} <a href="{{ ticket_url }}">{{ number }}</a>.
+        {{ _('Hay nuevas respuestas al ticket:') }} <a href="{{ ticket_url }}">{{ number }}</a>.
     </p>
     <p>
-        {{ reply.user.name }} replied:<br>
+        {{ reply.user.name }} respondio:<br>
         "{{ reply.content }}"
     </p>
 {% endblock %}

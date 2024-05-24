@@ -1,18 +1,18 @@
 <table>
     <tr>
-        <th style="text-align: left">{{ _('Status') }}</th>
+        <th style="text-align: left">{{ _('Estado') }}</th>
         <td>{{ ticket.current_status.status }}</td>
     </tr>
     <tr>
-        <th style="text-align: left">{{ _('Priority') }}</th>
+        <th style="text-align: left">{{ _('Prioridad') }}</th>
         <td>{{ ticket.ticket_priority.priority }}</td>
     </tr>
     <tr>
-        <th style="text-align: left">{{ _('Assigned') }}</th>
+        <th style="text-align: left">{{ _('Asignación') }}</th>
         <td>{% if ticket.assigned.username %}{{ ticket.assigned.name }}{% else %}ticket not claimed{% endif %}</td>
     </tr>
     <tr>
-        <th style="text-align: left; vertical-align: text-top">{{ _('Content') }}</th>
+        <th style="text-align: left; vertical-align: text-top">{{ _('Contenido') }}</th>
         <td>{{ ticket.content }}</td>
     </tr>
 </table>

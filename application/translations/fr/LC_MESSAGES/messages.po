@@ -309,7 +309,7 @@ msgstr "Se rappeler"
 
 #: application/flicket/templates/flicket_navbar.html:17
 #: application/flicket/views/tickets.py:84
-msgid "My Tickets"
+msgid "Mis Tickets"
 msgstr "Mes demandes"
 
 #: application/flicket/templates/flicket_navbar.html:18

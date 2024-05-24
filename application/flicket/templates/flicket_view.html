@@ -24,35 +24,35 @@
 
                         <div class="row m-0">
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Department') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Departamento') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.category.department.department }}
                                     {%- if change_category %}
                                         <a href="{{ url_for('flicket_bp.ticket_department_category', ticket_id = ticket.id) }}"
-                                           title="{{ _('category') }}">
+                                           title="{{ _('categoría') }}"></a>
                                             <i class="fas fa-edit"></i>
                                         </a>
                                     {%- endif %}
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Category') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Categoría') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.category.category }}
                                     {%- if change_category %}
                                         <a href="{{ url_for('flicket_bp.ticket_department_category', ticket_id = ticket.id) }}"
-                                           title="{{ _('department') }}">
+                                           title="{{ _('departamento') }}"></a>
                                             <i class="fas fa-edit"></i>
                                         </a>
                                     {%- endif %}
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Status') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Estado') }}</div>
                                 <div class="flicket-tickets-content">{{ ticket.current_status.status }}</div>
                             </div>
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Priority') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Prioridad') }}</div>
                                 <div class="flicket-tickets-content
                                 {%- if ticket.current_status.status == 'Closed' -%}
                                     {{ ' ' }}flicket-status-closed
@@ -67,16 +67,16 @@
                             </div>
 
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Assigned') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Asignado') }}</div>
                                 <div class="flicket-tickets-content">
                                     {% if ticket.assigned.username %}
                                         {{ ticket.assigned.name }}
-                                    {% else %}ticket not assigned{% endif %}
+                                    {% else %}ticket no asignado{% endif %}
                                 </div>
                             </div>
 
                             <div class="col">
-                                <div class="flicket-tickets-title">{{ _('Total Hours') }}</div>
+                                <div class="flicket-tickets-title">{{ _('Horas Totales') }}</div>
                                 <div class="flicket-tickets-content">
                                     {{ ticket.total_hours }}
                                 </div>
@@ -91,7 +91,7 @@
                             <div class="col text-right">
                                 <a class="btn btn-outline-primary btn-xxs"
                                    href="{{ url_for('flicket_bp.ticket_claim', ticket_id = ticket.id) }}">
-                                    {{ _('claim') }}
+                                    {{ _('reclamar') }}
                                 </a>
                             </div>
 
@@ -101,7 +101,7 @@
                             <div class="col text-right">
                                 <a class="btn btn-outline-primary btn-xxs"
                                    href="{{ url_for('flicket_bp.release', ticket_id = ticket.id) }}">
-                                    {{ _('release') }}
+                                    {{ _('liberar') }}
                                 </a>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                             <div class="col text-right">
                                 <a class="btn btn-outline-primary btn-xxs"
                                    href="{{ url_for('flicket_bp.ticket_assign', ticket_id = ticket.id) }}">
-                                    {{ _('assign') }}
+                                    {{ _('asignar') }}
                                 </a>
                             </div>
                         </div>
@@ -119,15 +119,15 @@
         </div>
 
 
-        <!-- subscribers -->
+        <!-- suscriptores -->
         <div class="row m-2 border rounded p-2 bg-white">
             <div class="col align-self-center small">
-                Subscribed: {% for s in ticket.subscribers %}
+                Suscritos: {% for s in ticket.subscribers %}
                 <a href="mailto:{{ s.user.email }}">{{ s.user.name }}</a>
                 {%- if (ticket.is_subscribed(g.user) and s.user == g.user) or g.user.is_admin or g.user.is_super_user -%}
                     &nbsp;<a class="small" style="color:red"
                              href="{{ url_for('flicket_bp.unsubscribe_ticket', ticket_id = ticket.id, user_id=s.user.id) }}"
-                             title="unsubscribe"><i class="fas fa-times"></i></a>
+                             title="cancelar suscripción"><i class="fas fa-times"></i></a>
                 {%- endif -%} {{ ", " if not loop.last }}
             {% endfor %}
             </div>
@@ -138,10 +138,10 @@
                   name="subscribe_user">
                 {{ form.hidden_tag() }}
                 <div class="col">
-                    {{ subscribers_form.username(class="form-control form-control-sm mr-1", id="autocomplete-username", placeholder="User Name") }}
+                    {{ subscribers_form.username(class="form-control form-control-sm mr-1", id="autocomplete-username", placeholder="Nombre de usuario") }}
                 </div>
                 {% if subscribers_form.username.errors %}
-                    <div class="btn btn-warning btn-sm">Invalid username.</div>
+                    <div class="btn btn-warning btn-sm">Nombre de usuario inválido.</div>
                 {% endif %}
                 <div class="col">
                     {{ subscribers_form.sub_user(class="btn btn-primary btn-sm") }}
@@ -149,7 +149,7 @@
             </form>
         </div>
 
-        <!-- pagination row -->
+        <!-- fila de paginación -->
         <div class="row m-2">
             <div class="col">
                 <ul class="pagination pagination-sm m-0">
@@ -195,13 +195,13 @@
             </div>
         </div>
 
-        <!-- display initial ticket request -->
+        <!-- mostrar solicitud de ticket inicial -->
         {% set content = ticket %}
         {% set _replies = None %}
         {% include('flicket_post.html') %}
-        <!-- end display initial ticket request -->
+        <!-- fin mostrar solicitud de ticket inicial -->
 
-        <!-- display actions -->
+        <!-- mostrar acciones -->
         {% for action in ticket.actions_nonepost %}
             <div class="row m-3">
                 <div class="col border rounded p-1 flicket-action">
@@ -209,11 +209,11 @@
                 </div>
             </div>
         {% endfor %}
-        <!-- end display actions -->
+        <!-- fin mostrar acciones -->
 
-        <!-- flicket ticket replies -->
+        <!-- respuestas del ticket de flicket -->
         {% for r in replies.items %}
-            <!-- display replies -->
+            <!-- mostrar respuestas -->
             {% set ticket = ticket %}
             {% set _replies = replies %}
             {% set post = r %}
@@ -221,7 +221,7 @@
             {% set content = post %}
             {% include('flicket_post.html') %}
 
-            <!-- display actions -->
+            <!-- mostrar acciones -->
             {% for action in r.actions %}
                 <div class="row m-3">
                     <div class="col border rounded p-1 flicket-action">
@@ -229,7 +229,7 @@
                     </div>
                 </div>
             {% endfor %}
-            <!-- end display actions -->
+            <!-- fin mostrar acciones -->
 
         {% endfor %}
 
