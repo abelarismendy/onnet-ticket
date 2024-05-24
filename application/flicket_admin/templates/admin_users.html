@@ -1,4 +1,4 @@
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% extends "flicket_base.html" %}
 
 {% block content %}
@@ -9,7 +9,7 @@
             <div class="col">
                 <h2>{{ title }}</h2>
                 <p>
-                    {{ _('Click on username to edit.') }}
+                    {{ _('Haz clic en el nombre de usuario para editar.') }}
                 </p>
             </div>
         </div>
@@ -46,11 +46,11 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Username') }}
+                                    {{ _('Nombre de usuario') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.username }}
-                                    <a href="{{ url_for('admin_bp.edit_user', id=u.id) }}" title="{{ _('edit') }}">
+                                    <a href="{{ url_for('admin_bp.edit_user', id=u.id) }}" title="{{ _('editar') }}"></a>
                                         <i class="fas fa-edit"
                                                 {%- if u.is_super_user -%}
                                            style="color: blue"
@@ -64,11 +64,11 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Name') }}
+                                    {{ _('Nombre') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.name }}
-                                    <a href="{{ url_for('admin_bp.edit_user', id=u.id) }}" title="{{ _('edit') }}">
+                                    <a href="{{ url_for('admin_bp.edit_user', id=u.id) }}" title="{{ _('editar') }}"></a>
                                         <i class="fas fa-edit"
                                                 {%- if u.is_super_user -%}
                                            style="color: blue"
@@ -82,7 +82,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Email') }}
+                                    {{ _('Correo electrónico') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     <a href="mailto:{{ u.email }}" title="{{ u.email }}">
@@ -93,7 +93,7 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Job Title') }}
+                                    {{ _('Cargo') }}
                                 </div>
                                 <div class="flicket-tickets-content">
                                     {{ u.job_title }}
@@ -102,10 +102,10 @@
 
                             <div class="col">
                                 <div class="flicket-tickets-title">
-                                    {{ _('Delete User') }}
+                                    {{ _('Eliminar usuario') }}
                                 </div>
                                 <div class="flicket-tickets-content">
-                                    <a href="{{ url_for('admin_bp.delete_user', id=u.id) }}" title="{{ _('delete') }}">
+                                    <a href="{{ url_for('admin_bp.delete_user', id=u.id) }}" title="{{ _('eliminar') }}"></a>
                                         <i class="fas fa-trash" style="color: red;"></i>
                                     </a>
                                 </div>

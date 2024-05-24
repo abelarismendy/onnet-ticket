@@ -1,4 +1,4 @@
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% extends "flicket_base.html" %}
 {% block content %}
     <!-- {{ self._TemplateReference__context.name }} -->
@@ -11,7 +11,7 @@
                 <h2 class="text-center">{{ title }}</h2>
                 {% if admin_edit %}
                     <p>
-                        Edit user details. Use "CTRL" to deselect within group column.
+                        Editar detalles de usuario. Usa "CTRL" para deseleccionar en la columna de grupo.
                     </p>
                 {% endif %}
             </div>
@@ -39,7 +39,7 @@
                     <div class="row mb-2">
                         <label class="col-2 col-form-label">{{ form.name.label.text }}</label>
                         <div class="col">
-                            {{ form.name(class="form-control", placeholder="name") }}
+                            {{ form.name(class="form-control", placeholder="nombre") }}
                         </div>
                         {% if form.name.errors %}
                             <div class="alert alert-warning small">
@@ -52,7 +52,7 @@
                     <div class="row mb-2">
                         <label class="col-2 col-form-label">{{ form.email.label.text }}</label>
                         <div class="col">
-                            {{ form.email(class="form-control", placeholder="email") }}
+                            {{ form.email(class="form-control", placeholder="correo electrónico") }}
                         </div>
                     </div>
                     {% if form.email.errors %}
@@ -65,7 +65,7 @@
                     <div class="row mb-2">
                         <label class="col-2 col-form-label">{{ form.job_title.label.text }}</label>
                         <div class="col">
-                            {{ form.job_title(class="form-control", placeholder="job title / role") }}
+                            {{ form.job_title(class="form-control", placeholder="cargo / rol") }}
                         </div>
                     </div>
                     {% if form.job_title.errors %}
@@ -78,7 +78,7 @@
                     <div class="row mb-2">
                         <label class="col-2 col-form-label">{{ form.locale.label.text }}</label>
                         <div class="col">
-                            {{ form.locale(class="form-control", placeholder="locale") }}
+                            {{ form.locale(class="form-control", placeholder="idioma") }}
                         </div>
                         {% if form.locale.errors %}
                             <div class="alert alert-warning small">
@@ -91,7 +91,7 @@
                     <div class="row mb-2">
                         <label class="col-2 col-form-label">{{ form.password.label.text }}</label>
                         <div class="col">
-                            {{ form.password(class="form-control", placeholder="password") }}
+                            {{ form.password(class="form-control", placeholder="contraseña") }}
                         </div>
                         {% if form.password.errors %}
                             <div class="alert alert-warning small">
@@ -104,7 +104,7 @@
                     <div class="row mb-2">
                         <label class="col-2 col-form-label">{{ form.confirm.label.text }}</label>
                         <div class="col">
-                            {{ form.confirm(class="form-control", placeholder="repeat password") }}
+                            {{ form.confirm(class="form-control", placeholder="repetir contraseña") }}
                         </div>
                         {% if form.confirm.errors %}
                             <div class="alert alert-warning small">
@@ -123,7 +123,7 @@
                     <div class="row mb-2">
                         {% if admin_edit %}
 
-                            <label class="col-2 col-form-label">Groups</label>
+                            <label class="col-2 col-form-label">Grupos</label>
                             <div class="col">
                                 {{ form.groups(class="form-control") }}
 

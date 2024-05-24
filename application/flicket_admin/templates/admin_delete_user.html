@@ -1,4 +1,4 @@
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% extends "flicket_base.html" %}
 {% block content %}
     <!-- {{ self._TemplateReference__context.name }} -->
@@ -21,13 +21,13 @@
                         {{ form.id() }}
                         <div class="row m-2 text-center">
                             <div class="col">
-                                {{ _('Are you sure you want to delete the following user? This may impact relational query look ups.') }}
+                                {{ _('¿Estás seguro de que quieres eliminar al siguiente usuario? Esto puede afectar las consultas relacionales.') }}
                             </div>
                         </div>
 
                         <div class="row m-2">
                             <div class="col-4 text-right">
-                                {{ _('Username') }}
+                                {{ _('Nombre de usuario') }}
                             </div>
                             <div class="col">
                                 {{ user_details.username }}
@@ -35,13 +35,13 @@
                         </div>
                         <div class="row m-2">
                             <div class="col-4 text-right">
-                                {{ _('Name') }}
+                                {{ _('Nombre') }}
                             </div>
                             <div class="col">{{ user_details.name }}</div>
                         </div>
                         <div class="row m-2">
                             <div class="col-4 text-right">
-                                {{ _('Email') }}
+                                {{ _('Correo electrónico') }}
                             </div>
                             <div class="col">
                                 {{ user_details.email }}
@@ -49,7 +49,7 @@
                         </div>
                         <div class="row m-2">
                             <div class="col-4 text-right">
-                                {{ _('Enter password') }}
+                                {{ _('Ingrese contraseña') }}
                             </div>
                             <div class="col">
                                 {{ form.password(class="form-control form-control-sm") }}
@@ -64,7 +64,7 @@
                         </div>
                         <div class="row m-2">
                             <div class="col text-center">
-                                <input class="btn btn-danger btn-sm" type="submit" value="delete user"/>
+                                <input class="btn btn-danger btn-sm" type="submit" value="eliminar usuario"/>
                             </div>
                         </div>
                     </form>

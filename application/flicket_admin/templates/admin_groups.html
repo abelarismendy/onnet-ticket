@@ -1,4 +1,4 @@
-<!-- extend from base layout -->
+<!-- extender desde el diseño base -->
 {% extends "flicket_base.html" %}
 {% block content %}
     <!-- {{ self._TemplateReference__context.name }} -->
@@ -9,7 +9,7 @@
         <div class="row border rounded m-2 p-2 bg-white">
             <div class="col"><h2>{{ title }}</h2>
                 <p>
-                    {{ _('Click on group name to edit.') }}
+                    {{ _('Haz clic en el nombre del grupo para editar.') }}
                 </p>
             </div>
         </div>
@@ -17,8 +17,8 @@
         <div class="row border rounded bg-white m-2 p-2">
             <div class="col">
                 <div class="row border-bottom m-2">
-                    <div class="col">{{ _('Group Name') }}</div>
-                    <div class="col">{{ _('Delete') }}</div>
+                    <div class="col">{{ _('Nombre del }}</div>
+                    <div class="col">{{ }}</div>
                 </div>
                 {%- for group in groups -%}
                     <div class="row m-2">
@@ -29,22 +29,22 @@
                         </div>
                         <div class="col">
                             <a href="{{ url_for('admin_bp.admin_delete_group', id=group.id) }}">
-                                {{ _('delete') }}
+                                {{ _('eliminar') }}
                             </a>
                         </div>
                     </div>
                 {%- endfor -%}
 
                 <hr/>
-                <h2>{{ _('Add Group') }}</h2>
+                <h2>{{ _('Agregar Grupo') }}</h2>
                 <form action="" method="post" name="add_group">
                     {{ form.hidden_tag() }}
                     <p>
-                        {{ _('Please enter group name.') }}
+                        {{ _('Por favor ingresa el nombre del grupo.') }}
                     </p>
                     <div class="row mb-2">
                         <div class="col">
-                            {{ _('Group Name') }}
+                            {{ _('Nombre del Grupo') }}
 
                         </div>
                         <div class="col">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="row">
                         <div class="col text-center">
-                            <input class="btn btn-primary" type="submit" value="add group"/></div>
+                            <input class="btn btn-primary" type="submit" value="agregar grupo"/></div>
                     </div>
                 </form>
             </div>

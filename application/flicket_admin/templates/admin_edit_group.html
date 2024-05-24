@@ -1,4 +1,4 @@
-<!-- extend from base layout -->
+<!-- Extender desde el diseño base -->
 {% extends "flicket_base.html" %}
 {% block content %}
     <!-- {{ self._TemplateReference__context.name }} -->
@@ -23,13 +23,13 @@
 
                     <div class="row m-2">
                         <div class="col">
-                            {{ _('Please add new users credentials.') }}
+                            {{ _('Por favor, añade las credenciales de los nuevos usuarios.') }}
                         </div>
                     </div>
 
                     <div class="row m-2">
                         <div class="col-5">
-                            {{ _('Group Name') }}
+                            {{ _('Nombre del grupo') }}
                         </div>
                         <div class="col">
                             {{ form.group_name(class="form-control form-control-sm") }}
@@ -45,7 +45,7 @@
 
                     <div class="row">
                         <div class="col text-center">
-                            <input class="btn btn-primary" type="submit" value="edit group"/>
+                            <input class="btn btn-primary" type="submit" value="editar grupo"/>
                         </div>
                     </div>
 
